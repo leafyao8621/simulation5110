@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "system.h"
 
 static char *name[7] = {
@@ -11,7 +12,7 @@ static char *name[7] = {
     (char*)"N99"
 }; 
 
-System::System(int32_t seed) {
+System::System(int32_t seed, std::string(config)) {
     this->cur_time = 0;    
     System::Demand **iter = (System::Demand**)this->demand;
     for (char i = 0, **ii = name; i < 6; i++,
@@ -30,7 +31,40 @@ System::System(int32_t seed) {
                                     *iter_init_backlog, 0)),
          *(iter_backlog++) = *(iter_init_backlog++));
     *iter_backlog = 0;
-    this->display_status(std::cout);
+    {
+        std::ifstream ifs_changeover(std::string("data/changeover.time"));
+        std::ifstream ifs_process(std::string("data/process.time"));
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 7; j++) {
+                ifs_changeover >> this->changeover_time[i][j];
+                ifs_process >> this->process_time[i][j];
+            }
+        }
+    }
+    {
+        std::ifstream ifs_route(config + "/route.config");
+        uint64_t num, tmp;
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 4; j++) {
+                ifs_route >> num;
+                if (num) {
+                    this->routing[i][j] = num << 56;
+                    for (int k = 0; k < num; ifs_route >> tmp,
+                         this->routing[i][j] |= tmp << (k << 3), k++);
+                }
+            }
+        }
+    }
+    {
+        std::ifstream ifs_facility(config + "/facility.config");
+        int num;
+        std::vector<System::Machine> *iter_facility =
+        (std::vector<System::Machine>*)this->facility;
+        for (int i = 0; i < 4; i++, iter_facility++) {
+            ifs_facility >> num;
+            for (int j = 0; j < num; j++, iter_facility->push_back(Machine()));
+        }
+    }
 }
 
 System::~System() {
@@ -72,18 +106,4 @@ void System::ship_order(System::PartType type) {
 //     std::cout << "not yet implemented\n";
 // }
 
-void System::display_status(std::ostream& os) {
-    os << "time " << this->cur_time / 10080 << " weeks " <<
-    (cur_time % 10080) / 1440 << " days " << (cur_time % 10080 % 1440) / 60 <<
-    ':' << cur_time % 10080 % 1440 % 60 << "\ncurrent backlog\n";
-    std::queue<System::Order> *iter_order =
-    (std::queue<System::Order>*)this->order;
-    uint32_t *iter_backlog = this->backlog;
-    char** iter_name = name;
-    for (int i = 0; i < 7; i++,
-         os << "part " << *(iter_name++) << " total remaining " <<
-         *(iter_backlog++) << " num orders " << iter_order->size() <<
-         " current order remaining " << iter_order->front().rem <<
-         '\n', iter_order++);
-}
 

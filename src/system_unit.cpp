@@ -5,6 +5,10 @@ System::Part::Part(uint64_t time_entered, System::PartType type) {
     this->type = type;
 }
 
+System::Part::Part() {
+    this->time_entered = 0;
+    this->type = System::PartType::C17;
+}
 System::Batch::Batch(System::PartType type) {
     this->type = type;
 }
