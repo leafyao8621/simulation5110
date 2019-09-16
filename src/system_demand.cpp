@@ -80,5 +80,5 @@ static inline double norm_inv(double p) {
 uint32_t System::DemandKDE::operator()() {
     uint32_t i = this->generator() * 100;
     double w = norm_inv(this->generator());
-    return fabs(this->mean + (this->data[i] - this->mean + this->h * w) * this->c);
+    return fabs(this->mean + (this->data[i] - this->mean + this->h * w) * this->c) + 0.5;
 }

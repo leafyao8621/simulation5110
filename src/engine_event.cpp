@@ -110,3 +110,18 @@ void Engine::EventStartDay::operator()(System *system,
     system->start_day();
     pq->push((new Engine::EventEndDay(this->ts + 960)));
 }
+
+Engine::EventEndWork::EventEndWork(uint64_t ts,
+                                   uint32_t operation,
+                                   uint32_t machine) :
+Engine::Event(ts) {
+    this->operation = operation;
+    this->machine = machine;
+}
+
+void Engine::EventEndWork::operator()(System *system,
+                                      Stats *stats,
+                                      PriorityQueue *pq) {
+    system->end_work(this->operation, this->machine);
+    pq->push(new EventEnterMachine(this->ts + 10, operation, machine));
+}

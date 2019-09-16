@@ -137,3 +137,7 @@ void System::start_day() {
         }
     }
 }
+
+void System::end_work(uint32_t operation, uint32_t machine) {
+    
+}

@@ -107,6 +107,7 @@ public:
     void enter_machine(uint32_t operation, uint32_t machine);
     void end_day();
     void start_day();
+    void end_work(uint32_t operation, uint32_t machine);
     void display_status(std::ostream& os);
     void display_config(std::ostream& os);
     ~System();

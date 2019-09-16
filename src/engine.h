@@ -75,6 +75,14 @@ public:
                                 Stats *stats,
                                 PriorityQueue *pq);
     };
+    class EventEndWork : public Engine::Event {
+        int32_t operation, machine;
+    public:
+        EventEndWork(uint64_t ts, uint32_t operation, uint32_t machine);
+        virtual void operator()(System *model,
+                                Stats *stats,
+                                PriorityQueue *pq);
+    };
 public:
     class EventComp {
     public:
