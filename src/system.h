@@ -28,14 +28,6 @@ public:
         Part(System::PartType type, uint32_t priority);
         Part();
     };
-    struct Batch {
-        System::PartType type;
-        uint32_t cnt;
-        std::queue<System::Part> parts;
-    public:
-        Batch(System::PartType type);
-        Batch();
-    };
     struct Order {
         System::PartType type;
         uint32_t amt, rem;
@@ -51,19 +43,18 @@ public:
     std::priority_queue<System::Part, std::vector<System::Part>, PartComp>;
     class Machine {
         bool is_down, is_busy;
-        uint32_t input_size;
         uint64_t reopen_time;
         System::Part cur;
-        std::queue<System::Batch> input;
-        PriorityQueue output;
+        PriorityQueue input;
     public:
         Machine();
         uint32_t get_input_size();
-        void shut_down();
+        bool get_is_busy();
+        uint64_t get_reopen_time();
+        void shut_down(uint64_t cur_time, uint64_t reopen_time);
         void turn_on();
         bool load_input(System::Part part, uint64_t ts);
         uint64_t load_machine(uint64_t ts);
-        void load_output(uint64_t ts);
         System::Part remove_part();
         void log(std::ostream& os);
     };
@@ -89,7 +80,7 @@ public:
 private:
     std::vector<System::Machine> facility[4];
     uint64_t routing[7][4];
-    System::Batch buffer;
+    std::queue<System::Part> buffer;
     std::queue<System::Order> order[7];
     uint32_t backlog[7];
     uint32_t priority[7];
@@ -107,7 +98,7 @@ public:
     void enter_machine(uint32_t operation, uint32_t machine);
     void end_day();
     void start_day();
-    void end_work(uint32_t operation, uint32_t machine);
+    uint64_t end_work(uint32_t operation, uint32_t machine);
     void display_status(std::ostream& os);
     void display_config(std::ostream& os);
     ~System();

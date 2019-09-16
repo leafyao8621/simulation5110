@@ -65,46 +65,46 @@ operation 0
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 0 weeks 0 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -119,46 +119,46 @@ operation 0
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 0 weeks 0 days 16:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -173,46 +173,46 @@ operation 0
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 0 weeks 1 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -227,46 +227,46 @@ operation 0
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 0 weeks 1 days 16:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -281,46 +281,46 @@ operation 0
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 0 weeks 2 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -335,46 +335,46 @@ operation 0
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 0 weeks 2 days 16:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -389,46 +389,46 @@ operation 0
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 0 weeks 3 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -443,46 +443,46 @@ operation 0
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 0 weeks 3 days 16:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -497,46 +497,46 @@ operation 0
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 0 weeks 4 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -551,46 +551,46 @@ operation 0
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 0 weeks 4 days 16:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -605,46 +605,46 @@ operation 0
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 0 weeks 5 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -659,46 +659,46 @@ operation 0
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 0 weeks 5 days 16:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -713,46 +713,46 @@ operation 0
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 0 weeks 6 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -767,46 +767,46 @@ operation 0
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 0 weeks 6 days 16:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -821,46 +821,46 @@ operation 0
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 1 weeks 0 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -875,46 +875,46 @@ operation 0
 machine 0
 down
 idle
-input size 61 top batch type C17 size 61
+queue length 61 top item C17
 machine 1
 down
 idle
-input size 34 top batch type E26 size 34
+queue length 34 top item E26
 machine 2
 down
 idle
-input size 69 top batch type D20 size 69
+queue length 69 top item D20
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 1 weeks 0 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -929,46 +929,46 @@ operation 0
 machine 0
 operational
 idle
-input size 61 top batch type C17 size 61
+queue length 61 top item C17
 machine 1
 operational
 idle
-input size 34 top batch type E26 size 34
+queue length 34 top item E26
 machine 2
 operational
 idle
-input size 69 top batch type D20 size 69
+queue length 69 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 0 days 0:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -983,46 +983,46 @@ operation 0
 machine 0
 operational
 idle
-input size 61 top batch type C17 size 61
+queue length 61 top item C17
 machine 1
 operational
 idle
-input size 34 top batch type E26 size 34
+queue length 34 top item E26
 machine 2
 operational
 idle
-input size 69 top batch type D20 size 69
+queue length 69 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 0 days 0:10
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1037,46 +1037,46 @@ operation 0
 machine 0
 operational
 idle
-input size 61 top batch type C17 size 61
+queue length 61 top item C17
 machine 1
 operational
 idle
-input size 34 top batch type E26 size 34
+queue length 34 top item E26
 machine 2
 operational
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 0 days 0:10
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1091,46 +1091,46 @@ operation 0
 machine 0
 operational
 idle
-input size 61 top batch type C17 size 61
+queue length 61 top item C17
 machine 1
 operational
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 operational
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 0 days 0:10
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1145,46 +1145,46 @@ operation 0
 machine 0
 operational
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 operational
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 operational
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 0 days 16:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1199,46 +1199,46 @@ operation 0
 machine 0
 down
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 down
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 down
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 1 weeks 1 days 0:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1253,46 +1253,46 @@ operation 0
 machine 0
 operational
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 operational
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 operational
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 1 days 16:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1307,46 +1307,46 @@ operation 0
 machine 0
 down
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 down
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 down
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 1 weeks 2 days 0:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1361,46 +1361,46 @@ operation 0
 machine 0
 operational
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 operational
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 operational
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 2 days 16:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1415,46 +1415,46 @@ operation 0
 machine 0
 down
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 down
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 down
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 1 weeks 3 days 0:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1469,46 +1469,46 @@ operation 0
 machine 0
 operational
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 operational
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 operational
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 3 days 16:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1523,46 +1523,46 @@ operation 0
 machine 0
 down
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 down
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 down
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 1 weeks 4 days 0:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1577,46 +1577,46 @@ operation 0
 machine 0
 operational
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 operational
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 operational
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 4 days 16:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1631,46 +1631,46 @@ operation 0
 machine 0
 down
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 down
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 down
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 1 weeks 5 days 0:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1685,46 +1685,46 @@ operation 0
 machine 0
 operational
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 operational
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 operational
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 5 days 16:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1739,46 +1739,46 @@ operation 0
 machine 0
 down
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 down
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 down
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 1 weeks 6 days 0:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1793,46 +1793,46 @@ operation 0
 machine 0
 operational
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 operational
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 operational
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 operational
 idle
-no input
+no queue
 operation 1
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 machine 2
 operational
 idle
-no input
+no queue
 operation 2
 machine 0
 operational
 idle
-no input
+no queue
 machine 1
 operational
 idle
-no input
+no queue
 operation 3
 machine 0
 operational
 idle
-no input
+no queue
 time 1 weeks 6 days 16:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1847,46 +1847,46 @@ operation 0
 machine 0
 down
 working on C17
-input size 60 top batch type C17 size 60
+queue length 60 top item C17
 machine 1
 down
 working on E26
-input size 33 top batch type E26 size 33
+queue length 33 top item E26
 machine 2
 down
 working on D20
-input size 68 top batch type D20 size 68
+queue length 68 top item D20
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue
 time 2 weeks 0 days 0:0
 current backlog
 part C17 total remaining 81 num orders 3 current order remaining 58
@@ -1901,43 +1901,43 @@ operation 0
 machine 0
 down
 working on C17
-input size 121 top batch type C17 size 121
+queue length 121 top item C17
 machine 1
 down
 working on E26
-input size 67 top batch type E26 size 67
+queue length 67 top item E26
 machine 2
 down
 working on D20
-input size 137 top batch type D20 size 137
+queue length 137 top item D20
 machine 3
 down
 idle
-no input
+no queue
 operation 1
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 machine 2
 down
 idle
-no input
+no queue
 operation 2
 machine 0
 down
 idle
-no input
+no queue
 machine 1
 down
 idle
-no input
+no queue
 operation 3
 machine 0
 down
 idle
-no input
+no queue

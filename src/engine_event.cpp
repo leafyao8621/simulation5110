@@ -122,6 +122,11 @@ Engine::Event(ts) {
 void Engine::EventEndWork::operator()(System *system,
                                       Stats *stats,
                                       PriorityQueue *pq) {
-    system->end_work(this->operation, this->machine);
-    pq->push(new EventEnterMachine(this->ts + 10, operation, machine));
+    uint64_t res = system->end_work(this->operation, this->machine);
+    if (res & 0x8000000000000000) {
+        
+    } else {
+        pq->push(new EventEnterMachine(this->ts, this->operation + 1,
+                                       res & 0x7fffffffffffffff));
+    }
 }

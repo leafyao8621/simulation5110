@@ -14,15 +14,26 @@ static char *name[7] = {
 System::Machine::Machine() {
     this->is_down = 0;
     this->is_busy = 0;
-    this->input_size = 0;
 }
 
 uint32_t System::Machine::get_input_size() {
-    return this->input_size;
+    return this->input.size();
 }
 
-void System::Machine::shut_down() {
+bool System::Machine::get_is_busy() {
+    return this->is_busy;
+}
+
+uint64_t System::Machine::get_reopen_time() {
+    return this->reopen_time;
+}
+
+void System::Machine::shut_down(uint64_t cur_time, uint64_t reopen_time) {
     this->is_down = 1;
+    this->reopen_time = reopen_time;
+    if (this->is_busy) {
+        this->cur.time_stopped = cur_time
+    }
 }
 
 void System::Machine::turn_on() {
@@ -31,33 +42,27 @@ void System::Machine::turn_on() {
 
 bool System::Machine::load_input(System::Part part, uint64_t ts) {
     part.time_entered = ts;
-    this->input_size++;
-    if (this->input.empty()) {
-        System::Batch bat(part.type);
-        bat.cnt = 1;
-        bat.parts.push(part);
-        this->input.push(bat);
-        return 1;
-    } else {
-        this->input.back().cnt++;
-        this->input.back().parts.push(part);
-        return 0;
-    }
+    bool out = this->input.empty();
+    this->input.push(part);
+    return out;
 }
 
 uint64_t System::Machine::load_machine(uint64_t ts) {
     if (!this->input.empty()) {
-        this->input_size--;
         if (this->is_down) {
             return this->reopen_time;
         } 
         this->is_busy = 1;
-        this->cur = this->input.front().parts.front();
-        if (!(--(this->input.front().cnt))) {
-            this->input.pop();
-        }
+        this->cur = this->input.top();
+        this->cur.time_started = ts;
+        this->input.pop();
     }
     return 0;
+}
+
+System::Part System::Machine::remove_part() {
+    this->is_busy = 0;
+    return this->cur;
 }
 
 void System::Machine::log(std::ostream& os) {
@@ -68,11 +73,10 @@ void System::Machine::log(std::ostream& os) {
         os << "idle\n";
     }
     // os << this->input_size << '\n';
-    if (this->input_size) {
-        os << "input size " << this->input_size << " top batch type " <<
-        name[(uint32_t)(this->input.front().type)] << " size " <<
-        this->input.front().cnt << '\n';
+    if (!this->input.empty()) {
+        os << "queue length " << this->input.size() << " top item " <<
+        name[(uint32_t)(this->input.top().type)] << '\n';
     } else {
-        os << "no input\n";
+        os << "no queue\n";
     }
 }

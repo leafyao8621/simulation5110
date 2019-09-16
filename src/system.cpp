@@ -123,7 +123,7 @@ void System::end_day() {
     (std::vector<System::Machine>*)this->facility;
     for (int i = 0; i < 4; i++, iter_facility++) {
         for (auto& m : *(iter_facility)) {
-            m.shut_down();
+            m.shut_down(this->cur_time, this->cur_time + 480);
         }
     }
 }
@@ -138,6 +138,24 @@ void System::start_day() {
     }
 }
 
-void System::end_work(uint32_t operation, uint32_t machine) {
-    
+uint64_t System::end_work(uint32_t operation, uint32_t machine) {
+    if (this->facility[operation][machine].get_is_busy()) {
+        return 0x8000000000000000 &
+               this->facility[operation][machine].get_reopen_time();
+    }
+    System::Part part = this->facility[operation][machine].remove_part();
+    uint64_t route = this->routing[(uint32_t)part.type][operation + 1];
+    uint64_t out = route & 0xff;
+    uint64_t num = (route & 0xff00000000000000) >> 56;
+    uint64_t size = this->facility[operation + 1][out].get_input_size();
+    uint64_t msk = 0xff00;
+    for (int i = 1; i < num; i++, msk <<= 8) {
+        uint32_t tmp = (route & msk) >> (i << 3);
+        uint32_t tmp_size = this->facility[operation + 1][tmp].get_input_size();
+        if (tmp_size < size) {
+            size = tmp_size;
+            out = tmp;
+        }
+    }
+    return out;
 }

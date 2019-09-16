@@ -10,16 +10,6 @@ System::Part::Part() {
     this->type = System::PartType::C17;
 }
 
-System::Batch::Batch(System::PartType type) {
-    this->type = type;
-    this->cnt = 0;
-}
-
-System::Batch::Batch() {
-    this->type = System::PartType::C17;
-    this->cnt = 0;
-}
-
 System::Order::Order(System::PartType type,
                      uint32_t amt,
                      uint64_t time_ordered) {
