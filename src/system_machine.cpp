@@ -25,7 +25,7 @@ void System::Machine::toggle_status() {
     this->is_down = !this->is_down;
 }
 
-void System::Machine::load_input(System::Part part, uint64_t ts) {
+bool System::Machine::load_input(System::Part part, uint64_t ts) {
     part.time_entered = ts;
     this->input_size++;
     if (this->input.empty()) {
@@ -33,9 +33,11 @@ void System::Machine::load_input(System::Part part, uint64_t ts) {
         bat.cnt = 1;
         bat.parts.push(part);
         this->input.push(bat);
+        return 1;
     } else {
         this->input.back().cnt++;
         this->input.back().parts.push(part);
+        return 0;
     }
 }
 

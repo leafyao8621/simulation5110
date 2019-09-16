@@ -53,6 +53,14 @@ public:
                                 Stats *stats,
                                 PriorityQueue* pq);
     };
+    class EventEnterMachine : public Engine::Event {
+        uint32_t operation, machine;
+    public:
+        EventEnterMachine(uint64_t ts, uint32_t operation, uint32_t machine);
+        virtual void operator()(System *model,
+                                Stats *stats,
+                                PriorityQueue* pq);
+    };
 public:
     class EventComp {
     public:
