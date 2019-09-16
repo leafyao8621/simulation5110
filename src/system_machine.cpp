@@ -32,7 +32,7 @@ void System::Machine::shut_down(uint64_t cur_time, uint64_t reopen_time) {
     this->is_down = 1;
     this->reopen_time = reopen_time;
     if (this->is_busy) {
-        this->cur.time_stopped = cur_time
+        this->cur.time_stopped = cur_time;
     }
 }
 
