@@ -61,6 +61,20 @@ public:
                                 Stats *stats,
                                 PriorityQueue* pq);
     };
+    class EventEndDay : public Engine::Event {
+    public:
+        EventEndDay(uint64_t ts) : Engine::Event(ts) {}
+        virtual void operator()(System *model,
+                                Stats *stats,
+                                PriorityQueue *pq);
+    };
+    class EventStartDay : public Engine::Event {
+    public:
+        EventStartDay(uint64_t ts) : Engine::Event(ts) {}
+        virtual void operator()(System *model,
+                                Stats *stats,
+                                PriorityQueue *pq);
+    };
 public:
     class EventComp {
     public:

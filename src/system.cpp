@@ -118,4 +118,22 @@ void System::enter_machine(uint32_t operation, uint32_t machine) {
     this->facility[operation][machine].load_machine(this->cur_time);
 }
 
+void System::end_day() {
+    std::vector<System::Machine> *iter_facility =
+    (std::vector<System::Machine>*)this->facility;
+    for (int i = 0; i < 4; i++, iter_facility++) {
+        for (auto& m : *(iter_facility)) {
+            m.shut_down();
+        }
+    }
+}
 
+void System::start_day() {
+    std::vector<System::Machine> *iter_facility =
+    (std::vector<System::Machine>*)this->facility;
+    for (int i = 0; i < 4; i++, iter_facility++) {
+        for (auto& m : *(iter_facility)) {
+            m.turn_on();
+        }
+    }
+}

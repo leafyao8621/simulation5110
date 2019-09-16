@@ -21,8 +21,12 @@ uint32_t System::Machine::get_input_size() {
     return this->input_size;
 }
 
-void System::Machine::toggle_status() {
-    this->is_down = !this->is_down;
+void System::Machine::shut_down() {
+    this->is_down = 1;
+}
+
+void System::Machine::turn_on() {
+    this->is_down = 0;
 }
 
 bool System::Machine::load_input(System::Part part, uint64_t ts) {

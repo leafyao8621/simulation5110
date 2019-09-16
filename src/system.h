@@ -59,7 +59,8 @@ public:
     public:
         Machine();
         uint32_t get_input_size();
-        void toggle_status();
+        void shut_down();
+        void turn_on();
         bool load_input(System::Part part, uint64_t ts);
         uint64_t load_machine(uint64_t ts);
         void load_output(uint64_t ts);
@@ -104,6 +105,8 @@ public:
     void ship_order(System::PartType type);
     void enter_input(Part part, uint32_t operation, uint32_t machine);
     void enter_machine(uint32_t operation, uint32_t machine);
+    void end_day();
+    void start_day();
     void display_status(std::ostream& os);
     void display_config(std::ostream& os);
     ~System();

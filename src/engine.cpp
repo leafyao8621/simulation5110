@@ -7,6 +7,7 @@ Engine::Engine(System *system, Stats *stats, uint64_t max_time) {
     this->stats = stats;
     this->max_time = max_time;
     this->event_queue.push((Engine::Event*)new Engine::EventGenerateOrder(0));
+    this->event_queue.push((Engine::Event*)new Engine::EventEndDay(960));
 }
 
 void Engine::run() {

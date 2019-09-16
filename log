@@ -159,6 +159,762 @@ machine 0
 operational
 idle
 no input
+time 0 weeks 0 days 16:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 0 weeks 1 days 0:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 0 weeks 1 days 16:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 0 weeks 2 days 0:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 0 weeks 2 days 16:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 0 weeks 3 days 0:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 0 weeks 3 days 16:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 0 weeks 4 days 0:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 0 weeks 4 days 16:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 0 weeks 5 days 0:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 0 weeks 5 days 16:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 0 weeks 6 days 0:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 0 weeks 6 days 16:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 1 weeks 0 days 0:0
+current backlog
+part C17 total remaining 70 num orders 2 current order remaining 58
+part E26 total remaining 38 num orders 2 current order remaining 34
+part D20 total remaining 17 num orders 2 current order remaining 15
+part B15 total remaining 45 num orders 2 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+idle
+input size 61 top batch type C17 size 61
+machine 1
+down
+idle
+input size 34 top batch type E26 size 34
+machine 2
+down
+idle
+input size 69 top batch type D20 size 69
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
 time 1 weeks 0 days 0:0
 current backlog
 part C17 total remaining 70 num orders 2 current order remaining 58
@@ -280,16 +1036,16 @@ machines
 operation 0
 machine 0
 operational
-working on C17
-input size 60 top batch type C17 size 60
+idle
+input size 61 top batch type C17 size 61
 machine 1
 operational
 idle
 input size 34 top batch type E26 size 34
 machine 2
 operational
-idle
-input size 69 top batch type D20 size 69
+working on D20
+input size 68 top batch type D20 size 68
 machine 3
 operational
 idle
@@ -334,16 +1090,16 @@ machines
 operation 0
 machine 0
 operational
-working on C17
-input size 60 top batch type C17 size 60
+idle
+input size 61 top batch type C17 size 61
 machine 1
 operational
 working on E26
 input size 33 top batch type E26 size 33
 machine 2
 operational
-idle
-input size 69 top batch type D20 size 69
+working on D20
+input size 68 top batch type D20 size 68
 machine 3
 operational
 idle
@@ -429,7 +1185,61 @@ machine 0
 operational
 idle
 no input
-time 2 weeks 0 days 0:0
+time 1 weeks 0 days 16:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+down
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+down
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 1 weeks 1 days 0:0
 current backlog
 part C17 total remaining 80 num orders 3 current order remaining 58
 part E26 total remaining 39 num orders 3 current order remaining 34
@@ -443,15 +1253,15 @@ operation 0
 machine 0
 operational
 working on C17
-input size 121 top batch type C17 size 121
+input size 60 top batch type C17 size 60
 machine 1
 operational
 working on E26
-input size 67 top batch type E26 size 67
+input size 33 top batch type E26 size 33
 machine 2
 operational
 working on D20
-input size 137 top batch type D20 size 137
+input size 68 top batch type D20 size 68
 machine 3
 operational
 idle
@@ -481,5 +1291,653 @@ no input
 operation 3
 machine 0
 operational
+idle
+no input
+time 1 weeks 1 days 16:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+down
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+down
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 1 weeks 2 days 0:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+operational
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+operational
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 1 weeks 2 days 16:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+down
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+down
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 1 weeks 3 days 0:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+operational
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+operational
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 1 weeks 3 days 16:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+down
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+down
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 1 weeks 4 days 0:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+operational
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+operational
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 1 weeks 4 days 16:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+down
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+down
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 1 weeks 5 days 0:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+operational
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+operational
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 1 weeks 5 days 16:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+down
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+down
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 1 weeks 6 days 0:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+operational
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+operational
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+operational
+idle
+no input
+operation 1
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+machine 2
+operational
+idle
+no input
+operation 2
+machine 0
+operational
+idle
+no input
+machine 1
+operational
+idle
+no input
+operation 3
+machine 0
+operational
+idle
+no input
+time 1 weeks 6 days 16:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+working on C17
+input size 60 top batch type C17 size 60
+machine 1
+down
+working on E26
+input size 33 top batch type E26 size 33
+machine 2
+down
+working on D20
+input size 68 top batch type D20 size 68
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
+idle
+no input
+time 2 weeks 0 days 0:0
+current backlog
+part C17 total remaining 80 num orders 3 current order remaining 58
+part E26 total remaining 39 num orders 3 current order remaining 34
+part D20 total remaining 18 num orders 3 current order remaining 15
+part B15 total remaining 52 num orders 3 current order remaining 40
+part D25 total remaining 24 num orders 2 current order remaining 14
+part F35 total remaining 5 num orders 2 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down
+working on C17
+input size 121 top batch type C17 size 121
+machine 1
+down
+working on E26
+input size 67 top batch type E26 size 67
+machine 2
+down
+working on D20
+input size 137 top batch type D20 size 137
+machine 3
+down
+idle
+no input
+operation 1
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+machine 2
+down
+idle
+no input
+operation 2
+machine 0
+down
+idle
+no input
+machine 1
+down
+idle
+no input
+operation 3
+machine 0
+down
 idle
 no input

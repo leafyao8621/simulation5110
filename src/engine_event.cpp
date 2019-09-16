@@ -96,3 +96,17 @@ void Engine::EventEnterMachine::operator()(System* system,
                                            PriorityQueue* pq) {
     system->enter_machine(this->operation, this->machine);
 }
+
+void Engine::EventEndDay::operator()(System *system,
+                                     Stats* stats,
+                                     PriorityQueue *pq) {
+    system->end_day();
+    pq->push((new Engine::EventStartDay(this->ts + 480)));
+}
+
+void Engine::EventStartDay::operator()(System *system,
+                                       Stats* stats,
+                                       PriorityQueue *pq) {
+    system->start_day();
+    pq->push((new Engine::EventEndDay(this->ts + 960)));
+}
