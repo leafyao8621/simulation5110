@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 #include "system.h"
 
 static char *name[7] = {
@@ -65,6 +66,18 @@ System::System(int32_t seed, std::string(config)) {
             for (int j = 0; j < num; j++, iter_facility->push_back(Machine()));
         }
     }
+    {
+        std::ifstream ifs_priority(config + "/priority.config");
+        uint32_t *iter_priority = this->priority;
+        System::PartType *iter_load_order = this->load_order;
+        for (int i = 0; i < 7;
+             ifs_priority >> *(iter_priority++),
+             *(iter_load_order++) = (System::PartType)(i++));
+    }
+    std::sort(this->load_order, this->load_order + 1,
+              [&] (System::PartType a, System::PartType b) {
+        return this->priority[a] > this->priority[b];
+    });
 }
 
 System::~System() {
@@ -102,6 +115,23 @@ void System::ship_order(System::PartType type) {
     }
 }
 
+void System::start_order() {
+    System::PartType *iter_load_order =
+    (System::PartType*)this->load_order;
+    for (int i = 0; i < 7; i++, iter_load_order++) {
+        if (!this->order[(uint32_t)(*iter_load_order)].empty()) {
+            uint32_t amt =
+            this->order[(uint32_t)(*iter_load_order)].front().amt;
+            uint32_t machine = routing[(uint32_t)(*iter_load_order)][0];
+            for (int j = 0; j < amt; j++) {
+                this->facility[0][i]
+                    .load_input(System::Part(*iter_load_order,
+                                this->priority[(uint32_t)(*iter_load_order)]),
+                                this->cur_time);
+            }
+        }
+    }
+}
 // void System::enter_queue(System::Part part, uint32_t stage, uint32_t machine) {
 //     std::cout << "not yet implemented\n";
 // }

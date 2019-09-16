@@ -27,7 +27,17 @@ void System::display_status(std::ostream& os) {
 }
 
 void System::display_config(std::ostream& os) {
-    os << "facility\n";
+    os << "priority\n";
+    uint32_t *iter_priority = this->priority;
+    for (int i = 0; i < 7;
+         os << "part " << name[(uint32_t)(i++)] << " priority " <<
+         *(iter_priority++) << '\n');
+    os << "load order\n";
+    System::PartType *iter_load_order = this->load_order;
+    os << name[(uint32_t)(*(iter_load_order++))];
+    for (int i = 1; i < 7; i++,
+         os << " -> " << name[(uint32_t)(*(iter_load_order++))]);
+    os << "\nfacility\n";
     std::vector<System::Machine> *iter_facility =
     (std::vector<System::Machine>*)this->facility;
     for (int i = 0; i < 4;

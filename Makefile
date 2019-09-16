@@ -4,7 +4,7 @@ OBJ = $(SRC:.cpp=.o)
 BIN = main
 
 %.o: %.cpp
-	$(CPP) -c $< -o $@
+	$(CPP) -g -c $< -o $@
 
 $(BIN) : $(OBJ)
 	$(CPP) $(OBJ) -o $(BIN)

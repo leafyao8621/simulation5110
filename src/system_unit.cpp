@@ -1,14 +1,15 @@
 #include "system.h"
 
-System::Part::Part(uint64_t time_entered, System::PartType type) {
-    this->time_entered = time_entered;
+System::Part::Part(System::PartType type, uint32_t priority) {
     this->type = type;
+    this->priority = priority;
 }
 
 System::Part::Part() {
     this->time_entered = 0;
     this->type = System::PartType::C17;
 }
+
 System::Batch::Batch(System::PartType type) {
     this->type = type;
 }
@@ -23,4 +24,8 @@ System::Order::Order(System::PartType type,
     this->type = type;
     this->amt = this->rem = amt;
     this->time_ordered = time_ordered;
+}
+
+bool System::PartComp::operator()(System::Part a, System::Part b) {
+    return a.priority < b.priority;
 }

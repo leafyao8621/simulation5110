@@ -21,10 +21,11 @@ public:
         N99
     };
     struct Part {
+        uint32_t priority;
         uint64_t time_entered, time_started, time_stopped;
         System::PartType type;
     public:
-        Part(uint64_t time_entered, System::PartType type);
+        Part(System::PartType type, uint32_t priority);
         Part();
     };
     struct Batch {
@@ -42,11 +43,18 @@ public:
     public:
         Order(System::PartType type, uint32_t amt, uint64_t time_ordered);
     };
+    class PartComp {
+    public:
+        bool operator()(System::Part a, System::Part b);
+    };
+    using PriorityQueue =
+    std::priority_queue<System::Part, std::vector<System::Part>, PartComp>;
     class Machine {
         bool is_down, is_busy;
         uint64_t reopen_time;
         System::Part cur;
-        std::queue<System::Batch> input, output;
+        std::queue<System::Batch> input;
+        PriorityQueue output;
     public:
         Machine();
         void toggle_status();
@@ -80,6 +88,8 @@ private:
     System::Batch buffer;
     std::queue<System::Order> order[7];
     uint32_t backlog[7];
+    uint32_t priority[7];
+    System::PartType load_order[7];
     System::Demand *demand[7];
     uint64_t changeover_time[4][7];
     uint64_t process_time[4][7];
@@ -87,6 +97,7 @@ public:
     uint64_t cur_time;
     System(int32_t seed, std::string config);
     void generate_order();
+    void start_order();
     bool fulfil_order(System::PartType type);
     void ship_order(System::PartType type);
     void enter_queue(Part part, uint32_t stage, uint32_t machine);

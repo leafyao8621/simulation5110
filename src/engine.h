@@ -30,6 +30,13 @@ public:
                                 Stats *stats,
                                 PriorityQueue* pq);
     };
+    class EventStartOrder : public Engine::Event {
+    public:
+        EventStartOrder(uint64_t ts) : Engine::Event(ts) {}
+        virtual void operator()(System *model,
+                                Stats *stats,
+                                PriorityQueue* pq);
+    };
     class EventFulfilOrder : public Engine::Event {
         uint32_t type;
     public:
