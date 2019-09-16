@@ -14,7 +14,6 @@ void Engine::EventGenerateOrder::operator()(System* system,
                                             Stats* stats,
                                             PriorityQueue* pq) {
     system->generate_order();
-    system->display_status(std::cout);
     pq->push(new Engine::EventStartOrder(this->ts + 10080));
     pq->push(new Engine::EventGenerateOrder(this->ts + 10080));
 }

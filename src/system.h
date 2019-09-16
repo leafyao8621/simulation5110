@@ -51,17 +51,20 @@ public:
     std::priority_queue<System::Part, std::vector<System::Part>, PartComp>;
     class Machine {
         bool is_down, is_busy;
+        uint32_t input_size;
         uint64_t reopen_time;
         System::Part cur;
         std::queue<System::Batch> input;
         PriorityQueue output;
     public:
         Machine();
+        uint32_t get_input_size();
         void toggle_status();
         void load_input(System::Part part, uint64_t ts);
         uint64_t load_machine(uint64_t ts);
         void load_output(uint64_t ts);
         System::Part remove_part();
+        void log(std::ostream& os);
     };
     class Demand {
     public:

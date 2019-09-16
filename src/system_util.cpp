@@ -24,6 +24,14 @@ void System::display_status(std::ostream& os) {
          *(iter_backlog++) << " num orders " << iter_order->size() <<
          " current order remaining " << iter_order->front().rem <<
          '\n', iter_order++);
+    os << "machines\n";
+    for (int i = 0; i < 4; i++) {
+        os << "operation " << i << '\n';
+        for (int j = 0; j < this->facility[i].size(); j++) {
+            os << "machine " << j << '\n';
+            this->facility[i][j].log(os);
+        }
+    }
 }
 
 void System::display_config(std::ostream& os) {
@@ -64,8 +72,11 @@ void System::display_config(std::ostream& os) {
                 for (int k = 1; k < num;
                      os << " | " << ((this->routing[i][j] & msk) >> (k << 3)),
                      k++);
-                os << " -> ";
+                
+            } else {
+                os << 'X';
             }
+            os << " -> ";
         }
         os << "out\n";
     }

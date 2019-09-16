@@ -48,11 +48,9 @@ System::System(int32_t seed, std::string(config)) {
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 4; j++) {
                 ifs_route >> num;
-                if (num) {
-                    this->routing[i][j] = num << 56;
-                    for (int k = 0; k < num; ifs_route >> tmp,
-                         this->routing[i][j] |= tmp << (k << 3), k++);
-                }
+                this->routing[i][j] = num << 56;
+                for (int k = 0; k < num; ifs_route >> tmp,
+                        this->routing[i][j] |= tmp << (k << 3), k++);
             }
         }
     }
@@ -63,7 +61,8 @@ System::System(int32_t seed, std::string(config)) {
         (std::vector<System::Machine>*)this->facility;
         for (int i = 0; i < 4; i++, iter_facility++) {
             ifs_facility >> num;
-            for (int j = 0; j < num; j++, iter_facility->push_back(Machine()));
+            for (int j = 0; j < num; j++,
+                 iter_facility->push_back(System::Machine()));
         }
     }
     {
@@ -120,11 +119,27 @@ void System::start_order() {
     (System::PartType*)this->load_order;
     for (int i = 0; i < 7; i++, iter_load_order++) {
         if (!this->order[(uint32_t)(*iter_load_order)].empty()) {
+            uint32_t operation = i == 5 ? 3 : 0;
             uint32_t amt =
             this->order[(uint32_t)(*iter_load_order)].front().amt;
-            uint32_t machine = routing[(uint32_t)(*iter_load_order)][0];
+            uint64_t dst = this->routing[(uint32_t)(*iter_load_order)][0];
+            uint32_t dst_num = (dst &
+                            0xff00000000000000) >> 56;
+            uint32_t machine = dst & 0xff;
+            uint32_t msk = 0xff00;
+            uint32_t input_size =
+            this->facility[operation][machine].get_input_size();
+            for (int j = 1; j < dst_num; j++, msk <<= 8) {
+                uint32_t tmp = (dst & msk) >> (j << 3);
+                uint32_t tmp_size =
+                this->facility[operation][tmp].get_input_size();
+                if (tmp_size < input_size) {
+                    machine = tmp;
+                    input_size = tmp_size;
+                }
+            }
             for (int j = 0; j < amt; j++) {
-                this->facility[0][i]
+                this->facility[0][machine]
                     .load_input(System::Part(*iter_load_order,
                                 this->priority[(uint32_t)(*iter_load_order)]),
                                 this->cur_time);
