@@ -28,6 +28,10 @@ uint64_t System::Machine::get_reopen_time() {
     return this->reopen_time;
 }
 
+System::Part System::Machine::get_cur() {
+    return this->cur;
+}
+
 void System::Machine::shut_down(uint64_t cur_time, uint64_t reopen_time) {
     this->is_down = 1;
     this->reopen_time = reopen_time;

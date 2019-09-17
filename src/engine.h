@@ -5,8 +5,9 @@
 #include <vector>
 #include <cstdint>
 
-class System;
-class Stats;
+
+#include "system.h"
+#include "stats.h"
 
 class Engine {
 public:
@@ -52,6 +53,16 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue* pq);
+    };
+    class EventEnterQueue : public Engine::Event {
+        uint32_t operation, machine;
+        System::Part part;
+    public:
+        EventEnterQueue(uint64_t ts, System::Part part, uint32_t opration,
+                        uint32_t machine);
+        virtual void operator()(System *system,
+                                Stats *stats,
+                                PriorityQueue *pq);
     };
     class EventEnterMachine : public Engine::Event {
         uint32_t operation, machine;

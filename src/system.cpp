@@ -84,6 +84,38 @@ System::~System() {
     for (int i = 0; i < 7; delete *(iter++), i++);
 }
 
+uint64_t System::get_process_time(uint32_t operation, uint32_t machine) {
+    return this->process_time[operation][machine];
+}
+
+System::Part System::get_part(uint32_t operation, uint32_t machine) {
+    return this->facility[operation][machine].get_cur();
+}
+
+System::PartType System::get_load_order(uint32_t ind) {
+    return this->load_order[ind];
+}
+
+bool System::get_order_empty(System::PartType type) {
+    return this->order[(uint32_t)type].empty();
+}
+
+uint32_t System::get_top_order_amt(System::PartType type) {
+    return this->order[(uint32_t)type].front().amt;
+}
+
+uint32_t System::get_routing(System::PartType type, uint32_t operation) {
+    return this->routing[(uint32_t)type][operation];
+}
+
+uint32_t System::get_input_size(uint32_t operation, uint32_t machine) {
+    return this->facility[operation][machine].get_input_size();
+}
+
+uint32_t System::get_priority(System::PartType type) {
+    return this->priority[(uint32_t)type];
+}
+
 void System::generate_order() {
     System::Demand **iter_dmd = (System::Demand**)this->demand;
     std::queue<System::Order> *iter_order =
@@ -114,8 +146,8 @@ void System::ship_order(System::PartType type) {
     }
 }
 
-void System::enter_machine(uint32_t operation, uint32_t machine) {
-    this->facility[operation][machine].load_machine(this->cur_time);
+uint64_t System::enter_machine(uint32_t operation, uint32_t machine) {
+    return this->facility[operation][machine].load_machine(this->cur_time);
 }
 
 void System::end_day() {
@@ -158,4 +190,9 @@ uint64_t System::end_work(uint32_t operation, uint32_t machine) {
         }
     }
     return out;
+}
+
+bool System::enter_input(System::Part type, uint32_t operation,
+                         uint32_t machine) {
+    return this->facility[operation][machine].load_input(type, this->cur_time);
 }

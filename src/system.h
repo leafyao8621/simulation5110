@@ -7,7 +7,6 @@
 #include <cstdint>
 
 #include "MRG32K3a.h"
-#include "engine.h"
 
 class System {
 public:
@@ -51,6 +50,7 @@ public:
         uint32_t get_input_size();
         bool get_is_busy();
         uint64_t get_reopen_time();
+        System::Part get_cur();
         void shut_down(uint64_t cur_time, uint64_t reopen_time);
         void turn_on();
         bool load_input(System::Part part, uint64_t ts);
@@ -91,17 +91,24 @@ private:
 public:
     uint64_t cur_time;
     System(int32_t seed, std::string config);
+    System::PartType get_load_order(uint32_t ind);
+    uint64_t get_process_time(uint32_t operation, uint32_t machine);
+    System::Part get_part(uint32_t operation, uint32_t machine);
+    bool get_order_empty(System::PartType type);
+    uint32_t get_top_order_amt(System::PartType type);
+    uint32_t get_routing(System::PartType type, uint32_t operation);
+    uint32_t get_input_size(uint32_t operation, uint32_t machine);
+    uint32_t get_priority(System::PartType type);
     void generate_order();
     bool fulfil_order(System::PartType type);
     void ship_order(System::PartType type);
-    void enter_input(Part part, uint32_t operation, uint32_t machine);
-    void enter_machine(uint32_t operation, uint32_t machine);
+    bool enter_input(Part part, uint32_t operation, uint32_t machine);
+    uint64_t enter_machine(uint32_t operation, uint32_t machine);
     void end_day();
     void start_day();
     uint64_t end_work(uint32_t operation, uint32_t machine);
     void display_status(std::ostream& os);
     void display_config(std::ostream& os);
     ~System();
-    friend class Engine::EventStartOrder;
 };
 #endif
