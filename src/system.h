@@ -49,6 +49,7 @@ public:
         Machine();
         uint32_t get_input_size();
         bool get_is_busy();
+        bool get_is_down();
         uint64_t get_reopen_time();
         System::Part get_cur();
         void shut_down(uint64_t cur_time, uint64_t reopen_time);

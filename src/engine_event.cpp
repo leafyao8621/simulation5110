@@ -109,6 +109,11 @@ void Engine::EventEnterMachine::operator()(System* system,
     uint64_t res = system->enter_machine(this->operation, this->machine);
     if (res) {
         pq->push(new EventEnterMachine(res, this->operation, this->machine));
+    } else {
+        pq->push(new EventEndWork(this->ts +
+                                  system->get_process_time(this->operation,
+                                  this->machine),
+                                  this->operation, this->machine));
     }
 }
 
@@ -139,7 +144,10 @@ void Engine::EventEndWork::operator()(System *system,
                                       PriorityQueue *pq) {
     System::Part part = system->get_part(this->operation, this->machine);
     uint64_t res = system->end_work(this->operation, this->machine);
-    if (res & 0x8000000000000000) {
+    if (res & 0x4000000000000000) {
+        std::cout << "shit\n";
+        pq->push(new EventFulfilOrder(this->ts, res & 0xbfffffffffffffff));
+    } else if (res & 0x8000000000000000) {
         pq->push(new EventEndWork((res & 0x7fffffffffffffff) +
                                   system->get_process_time(this->operation,
                                                            this->machine) -
@@ -148,5 +156,7 @@ void Engine::EventEndWork::operator()(System *system,
     } else {
         pq->push(new EventEnterQueue(this->ts, part, this->operation + 1,
                                        res & 0x7fffffffffffffff));
+        pq->push(new EventEnterMachine(this->ts, this->operation,
+                                       this->machine));
     }
 }

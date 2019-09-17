@@ -85,7 +85,7 @@ System::~System() {
 }
 
 uint64_t System::get_process_time(uint32_t operation, uint32_t machine) {
-    return this->process_time[operation][machine];
+    return this->process_time[operation][(uint32_t)this->facility[operation][machine].get_cur().type];
 }
 
 System::Part System::get_part(uint32_t operation, uint32_t machine) {
@@ -171,11 +171,14 @@ void System::start_day() {
 }
 
 uint64_t System::end_work(uint32_t operation, uint32_t machine) {
-    if (this->facility[operation][machine].get_is_busy()) {
-        return 0x8000000000000000 &
+    if (this->facility[operation][machine].get_is_down()) {
+        return 0x8000000000000000 |
                this->facility[operation][machine].get_reopen_time();
     }
     System::Part part = this->facility[operation][machine].remove_part();
+    if (operation == 3) {
+        return 0x4000000000000000 | (uint64_t)part.type;
+    }
     uint64_t route = this->routing[(uint32_t)part.type][operation + 1];
     uint64_t out = route & 0xff;
     uint64_t num = (route & 0xff00000000000000) >> 56;

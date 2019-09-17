@@ -24,6 +24,10 @@ bool System::Machine::get_is_busy() {
     return this->is_busy;
 }
 
+bool System::Machine::get_is_down() {
+    return this->is_down;
+}
+
 uint64_t System::Machine::get_reopen_time() {
     return this->reopen_time;
 }
