@@ -24,6 +24,7 @@ public:
                                 Stats *stats,
                                 PriorityQueue* pq) = 0;
         virtual void log(std::ostream& os) = 0;
+        virtual ~Event() {}
     };
     class EventGenerateOrder : public Engine::Event {
     public:
