@@ -52,6 +52,7 @@ public:
         bool get_is_down();
         uint64_t get_reopen_time();
         System::Part get_cur();
+        System::Part get_top_queue();
         void shut_down(uint64_t cur_time, uint64_t reopen_time);
         void turn_on();
         bool load_input(System::Part part, uint64_t ts);
@@ -94,9 +95,11 @@ public:
     System(int32_t seed, std::string config);
     System::PartType get_load_order(uint32_t ind);
     uint64_t get_process_time(uint32_t operation, uint32_t machine);
+    uint64_t get_changeover_time(uint32_t operation, System::PartType type);
     System::Part get_part(uint32_t operation, uint32_t machine);
+    System::Part get_top_queue(uint32_t operation, uint32_t machine);
     bool get_order_empty(System::PartType type);
-    uint32_t get_top_order_amt(System::PartType type);
+    uint32_t get_last_order_amt(System::PartType type);
     uint32_t get_routing(System::PartType type, uint32_t operation);
     uint32_t get_input_size(uint32_t operation, uint32_t machine);
     uint32_t get_priority(System::PartType type);

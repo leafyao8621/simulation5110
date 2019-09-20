@@ -19,5 +19,5 @@ System::Order::Order(System::PartType type,
 }
 
 bool System::PartComp::operator()(System::Part a, System::Part b) {
-    return a.priority < b.priority;
+    return a.priority > b.priority;
 }

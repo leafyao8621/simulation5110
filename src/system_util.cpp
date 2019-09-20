@@ -54,7 +54,7 @@ void System::display_config(std::ostream& os) {
     os << "time table\n";
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 7; j++) {
-            os << "operation " << i + 1 << " part " << name[j] <<
+            os << "operation " << i << " part " << name[j] <<
             " setup time " << this->changeover_time[i][j] <<
             " mins process time " << this->process_time[i][j] << " mins\n"; 
         }

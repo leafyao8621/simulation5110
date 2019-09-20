@@ -36,6 +36,10 @@ System::Part System::Machine::get_cur() {
     return this->cur;
 }
 
+System::Part System::Machine::get_top_queue() {
+    return this->input.top();
+}
+
 void System::Machine::shut_down(uint64_t cur_time, uint64_t reopen_time) {
     this->is_down = 1;
     this->reopen_time = reopen_time;
@@ -57,6 +61,9 @@ bool System::Machine::load_input(System::Part part, uint64_t ts) {
 
 uint64_t System::Machine::load_machine(uint64_t ts) {
     if (!this->input.empty()) {
+        if (ts == this->reopen_time) {
+            this->is_down = 0;
+        }
         if (this->is_down) {
             return this->reopen_time;
         } 
@@ -74,7 +81,11 @@ System::Part System::Machine::remove_part() {
 }
 
 void System::Machine::log(std::ostream& os) {
-    os << (this->is_down ? "down\n" : "operational\n");
+    if (this->is_down) {
+        os << "down reopen " << this->reopen_time << '\n';
+    } else {
+        os << "operational\n";
+    }
     if (this->is_busy) {
         os << "working on " << name[(uint32_t)(this->cur.type)] << '\n';
     } else {

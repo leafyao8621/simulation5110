@@ -85,11 +85,20 @@ System::~System() {
 }
 
 uint64_t System::get_process_time(uint32_t operation, uint32_t machine) {
-    return this->process_time[operation][(uint32_t)this->facility[operation][machine].get_cur().type];
+    return this->process_time[operation]
+    [(uint32_t)this->facility[operation][machine].get_cur().type];
 }
 
+uint64_t System::get_changeover_time(uint32_t operation,
+                                     System::PartType type) {
+    return this->process_time[operation][type];
+}
 System::Part System::get_part(uint32_t operation, uint32_t machine) {
     return this->facility[operation][machine].get_cur();
+}
+
+System::Part System::get_top_queue(uint32_t operation, uint32_t machine) {
+    return this->facility[operation][machine].get_top_queue();
 }
 
 System::PartType System::get_load_order(uint32_t ind) {
@@ -100,8 +109,8 @@ bool System::get_order_empty(System::PartType type) {
     return this->order[(uint32_t)type].empty();
 }
 
-uint32_t System::get_top_order_amt(System::PartType type) {
-    return this->order[(uint32_t)type].front().amt;
+uint32_t System::get_last_order_amt(System::PartType type) {
+    return this->order[(uint32_t)type].back().amt;
 }
 
 uint32_t System::get_routing(System::PartType type, uint32_t operation) {
@@ -155,7 +164,11 @@ void System::end_day() {
     (std::vector<System::Machine>*)this->facility;
     for (int i = 0; i < 4; i++, iter_facility++) {
         for (auto& m : *(iter_facility)) {
-            m.shut_down(this->cur_time, this->cur_time + 480);
+            if ((this->cur_time % 10080) / 1440 != 4) {
+                m.shut_down(this->cur_time, this->cur_time + 480);
+            } else {
+                m.shut_down(this->cur_time, this->cur_time + 3360);
+            }
         }
     }
 }

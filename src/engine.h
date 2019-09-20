@@ -23,6 +23,7 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue* pq) = 0;
+        virtual void log(std::ostream& os) = 0;
     };
     class EventGenerateOrder : public Engine::Event {
     public:
@@ -30,6 +31,7 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue* pq);
+        virtual void log(std::ostream& os);
     };
     class EventStartOrder : public Engine::Event {
     public:
@@ -37,6 +39,7 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue* pq);
+        virtual void log(std::ostream& os);
     };
     class EventFulfilOrder : public Engine::Event {
         uint32_t type;
@@ -45,6 +48,7 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue* pq);
+        virtual void log(std::ostream& os);
     };
     class EventShipOrder : public Engine::Event {
         uint32_t type;
@@ -53,6 +57,7 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue* pq);
+        virtual void log(std::ostream& os);
     };
     class EventEnterQueue : public Engine::Event {
         uint32_t operation, machine;
@@ -63,6 +68,7 @@ public:
         virtual void operator()(System *system,
                                 Stats *stats,
                                 PriorityQueue *pq);
+        virtual void log(std::ostream& os);
     };
     class EventEnterMachine : public Engine::Event {
         uint32_t operation, machine;
@@ -71,6 +77,7 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue* pq);
+        virtual void log(std::ostream& os);
     };
     class EventEndDay : public Engine::Event {
     public:
@@ -78,6 +85,7 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue *pq);
+        virtual void log(std::ostream& os);
     };
     class EventStartDay : public Engine::Event {
     public:
@@ -85,6 +93,7 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue *pq);
+        virtual void log(std::ostream& os);
     };
     class EventEndWork : public Engine::Event {
         int32_t operation, machine;
@@ -93,6 +102,7 @@ public:
         virtual void operator()(System *model,
                                 Stats *stats,
                                 PriorityQueue *pq);
+        virtual void log(std::ostream& os);
     };
 public:
     class EventComp {
@@ -106,7 +116,7 @@ private:
     uint64_t max_time;
 public:
     Engine(System *system, Stats *stats, uint64_t max_time);
-    void run();
+    void run(bool verbose);
     ~Engine();
 };
 #endif

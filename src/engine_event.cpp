@@ -2,12 +2,28 @@
 #include "engine.h"
 #include "system.h"
 
+static char *name[7] = {
+    (char*)"C17",
+    (char*)"E26",
+    (char*)"D20",
+    (char*)"B15",
+    (char*)"D25",
+    (char*)"F35",
+    (char*)"N99"
+}; 
+
 Engine::Event::Event(uint64_t ts) {
     this->ts = ts;
 }
 
 bool Engine::EventComp::operator()(Engine::Event* a, Engine::Event* b) {
     return a->ts > b->ts;
+}
+
+void Engine::EventGenerateOrder::log(std::ostream& os) {
+    os << "time " << this->ts / 10080 << " weeks " <<
+    (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
+    ':' << this->ts % 10080 % 1440 % 60 << " generate order\n";
 }
 
 void Engine::EventGenerateOrder::operator()(System* system,
@@ -25,7 +41,7 @@ void Engine::EventStartOrder::operator()(System* system,
         if (!system->get_order_empty(system->get_load_order(i))) {
             uint32_t operation = i == 5 ? 3 : 0;
             uint32_t amt =
-            system->get_top_order_amt((System::PartType)i);
+            system->get_last_order_amt((System::PartType)i);
             uint64_t dst = system->get_routing((System::PartType)(i), operation);
             uint32_t dst_num = (dst &
                                 0xff00000000000000) >> 56;
@@ -44,7 +60,7 @@ void Engine::EventStartOrder::operator()(System* system,
             }
             for (int j = 0; j < amt; j++) {
                 if (system->enter_input(System::Part((System::PartType)i,
-                    system->get_priority((System::PartType)(i))),
+                    system->get_priority((System::PartType)(i)) + this->ts),
                     operation, machine)) {
                     pq->push(new EventEnterMachine(this->ts + 10,
                                                    operation, machine));
@@ -52,6 +68,12 @@ void Engine::EventStartOrder::operator()(System* system,
             }
         }
     }
+}
+
+void Engine::EventStartOrder::log(std::ostream& os) {
+    os << "time " << this->ts / 10080 << " weeks " <<
+    (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
+    ':' << this->ts % 10080 % 1440 % 60 << " start order\n";
 }
 
 Engine::EventShipOrder::EventShipOrder(uint64_t ts,
@@ -63,7 +85,14 @@ Engine::Event(ts) {
 void Engine::EventShipOrder::operator()(System* system,
                                         Stats* stats,
                                         PriorityQueue* pq) {
+    stats->ship_order(this->type);
     system->ship_order((System::PartType)this->type);
+}
+
+void Engine::EventShipOrder::log(std::ostream& os) {
+    os << "time " << this->ts / 10080 << " weeks " <<
+    (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
+    ':' << this->ts % 10080 % 1440 % 60 << " ship order\n";
 }
 
 Engine::EventFulfilOrder::EventFulfilOrder(uint64_t ts,
@@ -75,9 +104,16 @@ Engine::Event(ts) {
 void Engine::EventFulfilOrder::operator()(System* system,
                                           Stats* stats,
                                           PriorityQueue* pq) {
+    stats->fulfil_order(this->type);
     if (system->fulfil_order((System::PartType)this->type)) {
         pq->push((new Engine::EventShipOrder(this->ts, this->type)));
     }
+}
+
+void Engine::EventFulfilOrder::log(std::ostream& os) {
+    os << "time " << this->ts / 10080 << " weeks " <<
+    (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
+    ':' << this->ts % 10080 % 1440 % 60 << " fulfil order\n";
 }
 
 Engine::EventEnterMachine::EventEnterMachine(uint64_t ts,
@@ -103,6 +139,15 @@ void Engine::EventEnterQueue::operator()(System *system,
         pq->push(new EventEnterMachine(this->ts + 10, this->operation, this->machine));
     }
 }
+
+void Engine::EventEnterQueue::log(std::ostream& os) {
+    os << "time " << this->ts / 10080 << " weeks " <<
+    (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
+    ':' << this->ts % 10080 % 1440 % 60 << " enter queue operation " <<
+    this->operation << " machine " << this->machine << " part " <<
+    name[(uint32_t)this->part.type] << '\n';
+}
+
 void Engine::EventEnterMachine::operator()(System* system,
                                            Stats* stats,
                                            PriorityQueue* pq) {
@@ -117,11 +162,28 @@ void Engine::EventEnterMachine::operator()(System* system,
     }
 }
 
+void Engine::EventEnterMachine::log(std::ostream& os) {
+    os << "time " << this->ts / 10080 << " weeks " <<
+    (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
+    ':' << this->ts % 10080 % 1440 % 60 << " enter machine operation " <<
+    this->operation << " machine " << this->machine << '\n';
+}
+
 void Engine::EventEndDay::operator()(System *system,
                                      Stats* stats,
                                      PriorityQueue *pq) {
     system->end_day();
-    pq->push((new Engine::EventStartDay(this->ts + 480)));
+    if ((this->ts % 10080) / 1440 != 4) {
+        pq->push((new Engine::EventStartDay(this->ts + 480)));
+    } else {
+        pq->push((new Engine::EventStartDay(this->ts + 3360)));
+    }
+}
+
+void Engine::EventEndDay::log(std::ostream& os) {
+    os << "time " << this->ts / 10080 << " weeks " <<
+    (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
+    ':' << this->ts % 10080 % 1440 % 60 << " end day\n";
 }
 
 void Engine::EventStartDay::operator()(System *system,
@@ -129,6 +191,12 @@ void Engine::EventStartDay::operator()(System *system,
                                        PriorityQueue *pq) {
     system->start_day();
     pq->push((new Engine::EventEndDay(this->ts + 960)));
+}
+
+void Engine::EventStartDay::log(std::ostream& os) {
+    os << "time " << this->ts / 10080 << " weeks " <<
+    (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
+    ':' << this->ts % 10080 % 1440 % 60 << " start day\n";
 }
 
 Engine::EventEndWork::EventEndWork(uint64_t ts,
@@ -145,8 +213,17 @@ void Engine::EventEndWork::operator()(System *system,
     System::Part part = system->get_part(this->operation, this->machine);
     uint64_t res = system->end_work(this->operation, this->machine);
     if (res & 0x4000000000000000) {
-        std::cout << "shit\n";
         pq->push(new EventFulfilOrder(this->ts, res & 0xbfffffffffffffff));
+        if (system->get_part(this->operation, this->machine).type ==
+            system->get_top_queue(this->operation, this->machine).type) {
+            pq->push(new EventEnterMachine(this->ts + 10, this->operation,
+                                           this->machine));
+        } else {
+            pq->push(new EventEnterMachine(this->ts +
+            system->get_changeover_time(this->operation,
+            system->get_top_queue(this->operation, this->machine).type), this->operation,
+            this->machine));
+        }
     } else if (res & 0x8000000000000000) {
         pq->push(new EventEndWork((res & 0x7fffffffffffffff) +
                                   system->get_process_time(this->operation,
@@ -156,7 +233,22 @@ void Engine::EventEndWork::operator()(System *system,
     } else {
         pq->push(new EventEnterQueue(this->ts, part, this->operation + 1,
                                        res & 0x7fffffffffffffff));
-        pq->push(new EventEnterMachine(this->ts, this->operation,
-                                       this->machine));
+        if (system->get_part(this->operation, this->machine).type ==
+            system->get_top_queue(this->operation, this->machine).type) {
+            pq->push(new EventEnterMachine(this->ts + 10, this->operation,
+                                           this->machine));
+        } else {
+            pq->push(new EventEnterMachine(this->ts +
+            system->get_changeover_time(this->operation,
+            system->get_top_queue(this->operation, this->machine).type), this->operation,
+            this->machine));
+        }
     }
+}
+
+void Engine::EventEndWork::log(std::ostream& os) {
+    os << "time " << this->ts / 10080 << " weeks " <<
+    (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
+    ':' << this->ts % 10080 % 1440 % 60 << " end work operation " <<
+    this->operation << " machine " << this->machine << '\n';
 }
