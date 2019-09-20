@@ -73,9 +73,9 @@ System::System(int32_t seed, std::string(config)) {
              ifs_priority >> *(iter_priority++),
              *(iter_load_order++) = (System::PartType)(i++));
     }
-    std::sort(this->load_order, this->load_order + 1,
+    std::sort(this->load_order, this->load_order + 7,
               [&] (System::PartType a, System::PartType b) {
-        return this->priority[a] > this->priority[b];
+        return this->priority[a] < this->priority[b];
     });
 }
 
