@@ -11,12 +11,12 @@ Engine::Engine(System *system, Stats *stats, uint64_t max_time) {
     this->event_queue.push((Engine::Event*)new Engine::EventEndDay(960));
 }
 
-void Engine::run(bool verbose) {
+void Engine::run(bool verbose, bool time) {
     std::cout << "initial state\n";
     this->system->display_status(std::cout);
     for (; this->system->cur_time < max_time && !this->event_queue.empty(); this->event_queue.pop()) {
         this->system->cur_time = this->event_queue.top()->ts;
-        if (verbose) {
+        if (time) {
             std::cout << this->system->cur_time << ' ';
             (*(this->event_queue.top())).log(std::cout);
         }

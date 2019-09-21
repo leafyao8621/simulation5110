@@ -117,7 +117,7 @@ private:
     uint64_t max_time;
 public:
     Engine(System *system, Stats *stats, uint64_t max_time);
-    void run(bool verbose);
+    void run(bool verbose, bool time);
     ~Engine();
 };
 #endif

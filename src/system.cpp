@@ -149,14 +149,22 @@ bool System::fulfil_order(System::PartType type) {
     return 1;
 }
 
-void System::ship_order(System::PartType type) {
+uint64_t System::ship_order(System::PartType type) {
     if (!this->order[(uint32_t)type].empty()) {
+        uint64_t out = this->order[(uint32_t)type].front().time_ordered -
+                       this->cur_time;
         this->order[(uint32_t)type].pop();
+        return out;
     }
+    return 0;
 }
 
-uint64_t System::enter_machine(uint32_t operation, uint32_t machine) {
-    return this->facility[operation][machine].load_machine(this->cur_time);
+uint64_t System::enter_machine(uint32_t operation, uint32_t machine,
+                               uint64_t& ql) {
+    uint64_t out =
+    this->facility[operation][machine].load_machine(this->cur_time);
+    ql = this->facility[operation][machine].get_input_size();
+    return out;
 }
 
 void System::end_day() {
@@ -184,6 +192,10 @@ void System::start_day() {
 }
 
 uint64_t System::end_work(uint32_t operation, uint32_t machine) {
+    if (this->cur_time >=
+        this->facility[operation][machine].get_reopen_time()) {
+        this->facility[operation][machine].turn_on();
+    }
     if (this->facility[operation][machine].get_is_down()) {
         return 0x8000000000000000 |
                this->facility[operation][machine].get_reopen_time();
@@ -209,6 +221,9 @@ uint64_t System::end_work(uint32_t operation, uint32_t machine) {
 }
 
 bool System::enter_input(System::Part type, uint32_t operation,
-                         uint32_t machine) {
-    return this->facility[operation][machine].load_input(type, this->cur_time);
+                         uint32_t machine, uint64_t& ql) {
+    uint64_t out =
+    this->facility[operation][machine].load_input(type, this->cur_time);
+    ql = this->facility[operation][machine].get_input_size();
+    return out;
 }

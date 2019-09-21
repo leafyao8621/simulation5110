@@ -1,0 +1,182 @@
+priority
+part C17 priority 1
+part E26 priority 2
+part D20 priority 3
+part B15 priority 4
+part D25 priority 5
+part F35 priority 6
+part N99 priority 7
+load order
+C17 -> E26 -> D20 -> B15 -> D25 -> F35 -> N99
+facility
+operation 0 num machines 3
+operation 1 num machines 4
+operation 2 num machines 2
+operation 3 num machines 1
+time table
+operation 0 part C17 setup time 90 mins process time 360 mins
+operation 0 part E26 setup time 90 mins process time 180 mins
+operation 0 part D20 setup time 90 mins process time 270 mins
+operation 0 part B15 setup time 90 mins process time 270 mins
+operation 0 part D25 setup time 90 mins process time 360 mins
+operation 0 part F35 setup time 0 mins process time 0 mins
+operation 0 part N99 setup time 0 mins process time 0 mins
+operation 1 part C17 setup time 90 mins process time 480 mins
+operation 1 part E26 setup time 90 mins process time 480 mins
+operation 1 part D20 setup time 90 mins process time 480 mins
+operation 1 part B15 setup time 90 mins process time 480 mins
+operation 1 part D25 setup time 90 mins process time 540 mins
+operation 1 part F35 setup time 0 mins process time 0 mins
+operation 1 part N99 setup time 0 mins process time 0 mins
+operation 2 part C17 setup time 120 mins process time 240 mins
+operation 2 part E26 setup time 120 mins process time 240 mins
+operation 2 part D20 setup time 120 mins process time 180 mins
+operation 2 part B15 setup time 120 mins process time 180 mins
+operation 2 part D25 setup time 120 mins process time 270 mins
+operation 2 part F35 setup time 0 mins process time 0 mins
+operation 2 part N99 setup time 0 mins process time 0 mins
+operation 3 part C17 setup time 180 mins process time 90 mins
+operation 3 part E26 setup time 180 mins process time 90 mins
+operation 3 part D20 setup time 180 mins process time 120 mins
+operation 3 part B15 setup time 180 mins process time 120 mins
+operation 3 part D25 setup time 180 mins process time 120 mins
+operation 3 part F35 setup time 180 mins process time 180 mins
+operation 3 part N99 setup time 0 mins process time 0 mins
+routing table:
+part C17 0 -> 0 | 1 -> 0 -> 0 -> out
+part E26 1 -> 2 -> 1 -> 0 -> out
+part D20 2 -> 2 -> 1 -> 0 -> out
+part B15 2 -> 3 -> 1 -> 0 -> out
+part D25 2 -> 3 -> 1 -> 0 -> out
+part F35 X -> X -> X -> 0 -> out
+part N99 X -> X -> X -> X -> out
+initial state
+time 0 weeks 0 days 0:0
+current backlog
+part C17 total remaining 58 num orders 1 current order remaining 58
+part E26 total remaining 34 num orders 1 current order remaining 34
+part D20 total remaining 15 num orders 1 current order remaining 15
+part B15 total remaining 40 num orders 1 current order remaining 40
+part D25 total remaining 14 num orders 1 current order remaining 14
+part F35 total remaining 3 num orders 1 current order remaining 3
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+idle
+no queue
+machine 1
+operational
+idle
+no queue
+machine 2
+operational
+idle
+no queue
+operation 1
+machine 0
+operational
+idle
+no queue
+machine 1
+operational
+idle
+no queue
+machine 2
+operational
+idle
+no queue
+machine 3
+operational
+idle
+no queue
+operation 2
+machine 0
+operational
+idle
+no queue
+machine 1
+operational
+idle
+no queue
+operation 3
+machine 0
+operational
+idle
+no queue
+time 261 weeks 0 days 0:0
+current backlog
+part C17 total remaining 1727 num orders 119 current order remaining 11
+part E26 total remaining 11 num orders 4 current order remaining 2
+part D20 total remaining 26 num orders 10 current order remaining 0
+part B15 total remaining 565 num orders 107 current order remaining 5
+part D25 total remaining 214 num orders 32 current order remaining 1
+part F35 total remaining 474 num orders 177 current order remaining 4
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+operational
+working on C17
+queue length 191 top item C17
+machine 1
+operational
+idle
+no queue
+machine 2
+operational
+idle
+queue length 291 top item B15
+operation 1
+machine 0
+operational
+working on C17
+no queue
+machine 1
+operational
+idle
+no queue
+machine 2
+operational
+idle
+no queue
+machine 3
+operational
+idle
+queue length 1 top item B15
+operation 2
+machine 0
+operational
+idle
+no queue
+machine 1
+operational
+working on E26
+queue length 9401 top item E26
+operation 3
+machine 0
+operational
+idle
+queue length 3368 top item E26
+part C17 num produced 2631 num order shipped 687 avg lead time 1.00262e+18 min
+part E26 num produced 1841 num order shipped 454 avg lead time 2.57513e+18 min
+part D20 num produced 1147 num order shipped 390 avg lead time 3.77941e+18 min
+part B15 num produced 1039 num order shipped 257 avg lead time 2.64539e+18 min
+part D25 num produced 1634 num order shipped 483 avg lead time 2.24657e+18 min
+part F35 num produced 245 num order shipped 79 avg lead time 4.89403e+18 min
+part N99 num produced 0 num order shipped 0 avg lead time -nan min
+operation 0
+machine 0 average queue length 63.3959
+machine 1 average queue length 4.2885
+machine 2 average queue length 203.284
+operation 1
+machine 0 average queue length 1.00052
+machine 1 average queue length 0.2814
+machine 2 average queue length 1.00998
+machine 3 average queue length 0.998719
+operation 2
+machine 0 average queue length 243.071
+machine 1 average queue length 4369.46
+operation 3
+machine 0 average queue length 1403.79

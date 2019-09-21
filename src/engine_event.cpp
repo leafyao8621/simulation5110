@@ -58,10 +58,11 @@ void Engine::EventStartOrder::operator()(System* system,
                     input_size = tmp_size;
                 }
             }
+            uint64_t dummy;
             for (int j = 0; j < amt; j++) {
                 if (system->enter_input(System::Part((System::PartType)i,
                     system->get_priority((System::PartType)(i)) + this->ts),
-                    operation, machine)) {
+                    operation, machine, dummy)) {
                     pq->push(new EventEnterMachine(this->ts + 10,
                                                    operation, machine));
                 }
@@ -85,8 +86,8 @@ Engine::Event(ts) {
 void Engine::EventShipOrder::operator()(System* system,
                                         Stats* stats,
                                         PriorityQueue* pq) {
-    stats->ship_order(this->type);
-    system->ship_order((System::PartType)this->type);
+    uint64_t lt = system->ship_order((System::PartType)this->type);
+    stats->ship_order(this->type, lt);
 }
 
 void Engine::EventShipOrder::log(std::ostream& os) {
@@ -135,8 +136,12 @@ Engine::Event(ts) {
 void Engine::EventEnterQueue::operator()(System *system,
                                          Stats *stats,
                                          PriorityQueue *pq) {
-    if (system->enter_input(this->part, this->operation, this->machine)) {
-        pq->push(new EventEnterMachine(this->ts + 10, this->operation, this->machine));
+    uint64_t ql;
+    if (system->enter_input(this->part, this->operation, this->machine, ql)) {
+        pq->push(new EventEnterMachine(this->ts + 10,
+                                       this->operation, this->machine));
+        stats->update_queue_length(this->ts, this->operation,
+                                   this->machine, ql);
     }
 }
 
@@ -151,7 +156,8 @@ void Engine::EventEnterQueue::log(std::ostream& os) {
 void Engine::EventEnterMachine::operator()(System* system,
                                            Stats* stats,
                                            PriorityQueue* pq) {
-    uint64_t res = system->enter_machine(this->operation, this->machine);
+    uint64_t ql;
+    uint64_t res = system->enter_machine(this->operation, this->machine, ql);
     if (res) {
         pq->push(new EventEnterMachine(res, this->operation, this->machine));
     } else {
@@ -159,6 +165,8 @@ void Engine::EventEnterMachine::operator()(System* system,
                                   system->get_process_time(this->operation,
                                   this->machine),
                                   this->operation, this->machine));
+        stats->update_queue_length(this->ts, this->operation,
+                                   this->machine, ql);
     }
 }
 
@@ -221,7 +229,8 @@ void Engine::EventEndWork::operator()(System *system,
         } else {
             pq->push(new EventEnterMachine(this->ts +
             system->get_changeover_time(this->operation,
-            system->get_top_queue(this->operation, this->machine).type), this->operation,
+            system->get_top_queue(this->operation, this->machine).type),
+            this->operation,
             this->machine));
         }
     } else if (res & 0x8000000000000000) {
@@ -240,8 +249,8 @@ void Engine::EventEndWork::operator()(System *system,
         } else {
             pq->push(new EventEnterMachine(this->ts +
             system->get_changeover_time(this->operation,
-            system->get_top_queue(this->operation, this->machine).type), this->operation,
-            this->machine));
+            system->get_top_queue(this->operation, this->machine).type),
+            this->operation, this->machine));
         }
     }
 }

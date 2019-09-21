@@ -105,9 +105,10 @@ public:
     uint32_t get_priority(System::PartType type);
     void generate_order();
     bool fulfil_order(System::PartType type);
-    void ship_order(System::PartType type);
-    bool enter_input(Part part, uint32_t operation, uint32_t machine);
-    uint64_t enter_machine(uint32_t operation, uint32_t machine);
+    uint64_t ship_order(System::PartType type);
+    bool enter_input(Part part, uint32_t operation, uint32_t machine,
+                     uint64_t& ql);
+    uint64_t enter_machine(uint32_t operation, uint32_t machine, uint64_t& ql);
     void end_day();
     void start_day();
     uint64_t end_work(uint32_t operation, uint32_t machine);
