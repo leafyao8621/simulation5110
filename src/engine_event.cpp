@@ -93,7 +93,8 @@ void Engine::EventShipOrder::operator()(System* system,
 void Engine::EventShipOrder::log(std::ostream& os) {
     os << "time " << this->ts / 10080 << " weeks " <<
     (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
-    ':' << this->ts % 10080 % 1440 % 60 << " ship order\n";
+    ':' << this->ts % 10080 % 1440 % 60 << " ship order " <<
+    name[this->type] << '\n';
 }
 
 Engine::EventFulfilOrder::EventFulfilOrder(uint64_t ts,
@@ -105,16 +106,20 @@ Engine::Event(ts) {
 void Engine::EventFulfilOrder::operator()(System* system,
                                           Stats* stats,
                                           PriorityQueue* pq) {
-    stats->fulfil_order(this->type);
-    if (system->fulfil_order((System::PartType)this->type)) {
+    bool real;
+    if (system->fulfil_order((System::PartType)this->type, real)) {
         pq->push((new Engine::EventShipOrder(this->ts, this->type)));
+    }
+    if (real) {
+        stats->fulfil_order(this->type);
     }
 }
 
 void Engine::EventFulfilOrder::log(std::ostream& os) {
     os << "time " << this->ts / 10080 << " weeks " <<
     (this->ts % 10080) / 1440 << " days " << (this->ts % 10080 % 1440) / 60 <<
-    ':' << this->ts % 10080 % 1440 % 60 << " fulfil order\n";
+    ':' << this->ts % 10080 % 1440 % 60 << " fulfil order " <<
+    name[this->type] << '\n';
 }
 
 Engine::EventEnterMachine::EventEnterMachine(uint64_t ts,

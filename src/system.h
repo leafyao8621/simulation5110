@@ -104,7 +104,7 @@ public:
     uint32_t get_input_size(uint32_t operation, uint32_t machine);
     uint32_t get_priority(System::PartType type);
     void generate_order();
-    bool fulfil_order(System::PartType type);
+    bool fulfil_order(System::PartType type, bool& real);
     uint64_t ship_order(System::PartType type);
     bool enter_input(Part part, uint32_t operation, uint32_t machine,
                      uint64_t& ql);

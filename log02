@@ -105,78 +105,78 @@ machine 0
 operational
 idle
 no queue
-time 261 weeks 0 days 0:0
+time 521 weeks 3 days 0:0
 current backlog
-part C17 total remaining 1393 num orders 99 current order remaining 2
-part E26 total remaining 131 num orders 27 current order remaining 1
-part D20 total remaining 21 num orders 8 current order remaining 0
-part B15 total remaining 228 num orders 46 current order remaining 0
-part D25 total remaining 192 num orders 28 current order remaining 1
-part F35 total remaining 403 num orders 153 current order remaining 1
+part C17 total remaining 2803 num orders 203 current order remaining 9
+part E26 total remaining 883 num orders 163 current order remaining 6
+part D20 total remaining 0 num orders 0 current order remaining 0
+part B15 total remaining 497 num orders 101 current order remaining 5
+part D25 total remaining 418 num orders 75 current order remaining 6
+part F35 total remaining 729 num orders 286 current order remaining 0
 part N99 total remaining 0 num orders 0 current order remaining 0
 machines
 operation 0
 machine 0
-down reopen 2630880
+operational
 working on C17
-queue length 913 top item C17
+queue length 1919 top item C17
 machine 1
-down reopen 2630880
+operational
 idle
 no queue
 machine 2
-down reopen 2630880
+operational
 idle
 no queue
 operation 1
 machine 0
-down reopen 2630880
+operational
 idle
 no queue
 machine 1
-down reopen 2630880
+operational
 idle
 no queue
 machine 2
-down reopen 2630880
+operational
 idle
 no queue
 machine 3
-down reopen 2630880
+operational
 working on B15
-queue length 1862 top item B15
+queue length 4268 top item B15
 operation 2
 machine 0
-down reopen 2630880
+operational
 working on D20
-queue length 2173 top item D20
+queue length 2700 top item D20
 machine 1
-down reopen 2630880
-working on B15
-queue length 1036 top item D25
+operational
+idle
+queue length 2052 top item E26
 operation 3
 machine 0
 operational
-working on F35
-queue length 1636 top item F35
-part C17 num produced 2465 num order shipped 187 avg lead time 1.2198e+18 min
-part E26 num produced 1501 num order shipped 234 avg lead time 2.87577e+18 min
-part D20 num produced 2739 num order shipped 1977 avg lead time 1.59616e+18 min
-part B15 num produced 1549 num order shipped 430 avg lead time 2.50085e+18 min
-part D25 num produced 1535 num order shipped 362 avg lead time 2.43954e+18 min
-part F35 num produced 326 num order shipped 89 avg lead time 5.03607e+18 min
+working on D20
+queue length 2872 top item D20
+part C17 num produced 4802 num order shipped 320 avg lead time 1.01946e+06 min
+part E26 num produced 2286 num order shipped 358 avg lead time 338862 min
+part D20 num produced 2022 num order shipped 480 avg lead time 33243.3 min
+part B15 num produced 2504 num order shipped 410 avg lead time 455625 min
+part D25 num produced 2671 num order shipped 393 avg lead time 300218 min
+part F35 num produced 695 num order shipped 193 avg lead time 1.59341e+06 min
 part N99 num produced 0 num order shipped 0 avg lead time -nan min
 operation 0
-machine 0 average queue length 423.313
-machine 1 average queue length 9.25772
-machine 2 average queue length 4.14597
+machine 0 average queue length 980.595
+machine 1 average queue length 9.37944
+machine 2 average queue length 4.09003
 operation 1
-machine 0 average queue length 0.998651
-machine 1 average queue length 0.997431
-machine 2 average queue length 1.03379
-machine 3 average queue length 708.423
+machine 0 average queue length 0.999869
+machine 1 average queue length 0.999268
+machine 2 average queue length 1.05716
+machine 3 average queue length 1999.65
 operation 2
-machine 0 average queue length 1028.56
-machine 1 average queue length 1109.17
+machine 0 average queue length 1167.13
+machine 1 average queue length 1205.02
 operation 3
-machine 0 average queue length 1069.01
+machine 0 average queue length 1596.7

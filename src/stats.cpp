@@ -61,7 +61,7 @@ void Stats::log(std::ostream& os, uint64_t ts) {
          i < 7; i++, j++, k++) {
         os << "part " << name[i] << " num produced " << *j <<
         " num order shipped " << *k << " avg lead time " <<
-        this->sum_lead_time[i] / *j << " min\n";        
+        this->sum_lead_time[i] / *k << " min\n";        
     }
     for (int i = 0; i < 4; i++) {
         os << "operation " << i << '\n';

@@ -139,20 +139,21 @@ void System::generate_order() {
     }
 }
 
-bool System::fulfil_order(System::PartType type) {
+bool System::fulfil_order(System::PartType type, bool& real) {
+    real = !this->order[(uint32_t)type].empty();
     if (!this->order[(uint32_t)type].empty() &&
         this->order[(uint32_t)type].front().rem) {
         this->order[(uint32_t)type].front().rem--;
         this->backlog[(uint32_t)type]--;
         return 0;
     }
-    return 1;
+    return !this->order[(uint32_t)type].empty();
 }
 
 uint64_t System::ship_order(System::PartType type) {
     if (!this->order[(uint32_t)type].empty()) {
-        uint64_t out = this->order[(uint32_t)type].front().time_ordered -
-                       this->cur_time;
+        uint64_t out = this->cur_time -
+                       this->order[(uint32_t)type].front().time_ordered;
         this->order[(uint32_t)type].pop();
         return out;
     }

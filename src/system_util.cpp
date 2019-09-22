@@ -22,7 +22,8 @@ void System::display_status(std::ostream& os) {
     for (int i = 0; i < 7; i++,
          os << "part " << *(iter_name++) << " total remaining " <<
          *(iter_backlog++) << " num orders " << iter_order->size() <<
-         " current order remaining " << iter_order->front().rem <<
+         " current order remaining " <<
+         (iter_order->empty() ? 0 : iter_order->front().rem) <<
          '\n', iter_order++);
     os << "machines\n";
     for (int i = 0; i < 4; i++) {
