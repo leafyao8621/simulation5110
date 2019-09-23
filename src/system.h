@@ -114,6 +114,7 @@ public:
     uint64_t end_work(uint32_t operation, uint32_t machine);
     void display_status(std::ostream& os);
     void display_config(std::ostream& os);
+    void display_backlog(std::ostream& os);
     ~System();
 };
 #endif

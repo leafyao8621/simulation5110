@@ -28,7 +28,8 @@ void Engine::EventGenerateOrder::log(std::ostream& os) {
 
 void Engine::EventGenerateOrder::operator()(System* system,
                                             Stats* stats,
-                                            PriorityQueue* pq) {
+                                            PriorityQueue* pq,
+                                            std::ostream& os) {
     system->generate_order();
     pq->push(new Engine::EventStartOrder(this->ts + 10080));
     pq->push(new Engine::EventGenerateOrder(this->ts + 10080));
@@ -36,7 +37,8 @@ void Engine::EventGenerateOrder::operator()(System* system,
 
 void Engine::EventStartOrder::operator()(System* system,
                                          Stats* stats,
-                                         PriorityQueue* pq) {
+                                         PriorityQueue* pq,
+                                         std::ostream& os) {
     for (int i = 0; i < 7; i++) {
         if (!system->get_order_empty(system->get_load_order(i))) {
             uint32_t operation = i == 5 ? 3 : 0;
@@ -85,7 +87,8 @@ Engine::Event(ts) {
 
 void Engine::EventShipOrder::operator()(System* system,
                                         Stats* stats,
-                                        PriorityQueue* pq) {
+                                        PriorityQueue* pq,
+                                        std::ostream& os) {
     uint64_t lt = system->ship_order((System::PartType)this->type);
     stats->ship_order(this->type, lt);
 }
@@ -105,7 +108,8 @@ Engine::Event(ts) {
 
 void Engine::EventFulfilOrder::operator()(System* system,
                                           Stats* stats,
-                                          PriorityQueue* pq) {
+                                          PriorityQueue* pq,
+                                          std::ostream& os) {
     bool real;
     if (system->fulfil_order((System::PartType)this->type, real)) {
         pq->push((new Engine::EventShipOrder(this->ts, this->type)));
@@ -140,7 +144,8 @@ Engine::Event(ts) {
 
 void Engine::EventEnterQueue::operator()(System *system,
                                          Stats *stats,
-                                         PriorityQueue *pq) {
+                                         PriorityQueue *pq,
+                                         std::ostream& os) {
     uint64_t ql;
     if (system->enter_input(this->part, this->operation, this->machine, ql)) {
         pq->push(new EventEnterMachine(this->ts + 10,
@@ -160,7 +165,8 @@ void Engine::EventEnterQueue::log(std::ostream& os) {
 
 void Engine::EventEnterMachine::operator()(System* system,
                                            Stats* stats,
-                                           PriorityQueue* pq) {
+                                           PriorityQueue* pq,
+                                           std::ostream& os) {
     uint64_t ql;
     uint64_t res = system->enter_machine(this->operation, this->machine, ql);
     if (res) {
@@ -184,8 +190,10 @@ void Engine::EventEnterMachine::log(std::ostream& os) {
 
 void Engine::EventEndDay::operator()(System *system,
                                      Stats* stats,
-                                     PriorityQueue *pq) {
+                                     PriorityQueue *pq,
+                                     std::ostream& os) {
     system->end_day();
+    system->display_backlog(os);
     if ((this->ts % 10080) / 1440 != 4) {
         pq->push((new Engine::EventStartDay(this->ts + 480)));
     } else {
@@ -201,7 +209,8 @@ void Engine::EventEndDay::log(std::ostream& os) {
 
 void Engine::EventStartDay::operator()(System *system,
                                        Stats* stats,
-                                       PriorityQueue *pq) {
+                                       PriorityQueue *pq,
+                                       std::ostream& os) {
     system->start_day();
     pq->push((new Engine::EventEndDay(this->ts + 960)));
 }
@@ -222,7 +231,8 @@ Engine::Event(ts) {
 
 void Engine::EventEndWork::operator()(System *system,
                                       Stats *stats,
-                                      PriorityQueue *pq) {
+                                      PriorityQueue *pq,
+                                      std::ostream& os) {
     System::Part part = system->get_part(this->operation, this->machine);
     uint64_t res = system->end_work(this->operation, this->machine);
     if (res & 0x4000000000000000) {

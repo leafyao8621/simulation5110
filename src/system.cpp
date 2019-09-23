@@ -13,7 +13,7 @@ static char *name[7] = {
     (char*)"N99"
 }; 
 
-System::System(int32_t seed, std::string(config)) {
+System::System(int32_t seed, std::string config) {
     this->cur_time = 0;    
     System::Demand **iter = (System::Demand**)this->demand;
     for (char i = 0, **ii = name; i < 6; i++,

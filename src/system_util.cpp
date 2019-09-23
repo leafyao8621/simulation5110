@@ -82,3 +82,10 @@ void System::display_config(std::ostream& os) {
         os << "out\n";
     }
 }
+
+void System::display_backlog(std::ostream& os) {
+    os << *this->backlog;
+    for (uint32_t i = 1, *j = this->backlog + 1; i < 7;
+         i++, os << ',' << *(j++));
+    os << '\n';
+}

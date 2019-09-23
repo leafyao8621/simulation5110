@@ -105,9 +105,63 @@ machine 0
 operational
 idle
 no queue
+time 16 weeks 0 days 0:0
+current backlog
+part C17 total remaining 0 num orders 0 current order remaining 0
+part E26 total remaining 45 num orders 11 current order remaining 4
+part D20 total remaining 56 num orders 15 current order remaining 2
+part B15 total remaining 89 num orders 16 current order remaining 3
+part D25 total remaining 77 num orders 11 current order remaining 1
+part F35 total remaining 41 num orders 15 current order remaining 0
+part N99 total remaining 0 num orders 0 current order remaining 0
+machines
+operation 0
+machine 0
+down reopen 161280
+working on C17
+queue length 23 top item C17
+machine 1
+down reopen 161280
+idle
+no queue
+machine 2
+down reopen 161280
+idle
+queue length 5 top item D25
+operation 1
+machine 0
+down reopen 161280
+idle
+no queue
+machine 1
+down reopen 161280
+idle
+no queue
+machine 2
+down reopen 161280
+idle
+no queue
+machine 3
+operational
+working on D25
+no queue
+operation 2
+machine 0
+down reopen 161280
+working on C17
+queue length 192 top item C17
+machine 1
+down reopen 161280
+working on D20
+queue length 1110 top item D20
+operation 3
+machine 0
+down reopen 161280
+working on C17
+queue length 2469 top item C17
 time 521 weeks 3 days 0:0
 current backlog
-part C17 total remaining 0 num orders 0 current order remaining 4637080
+part C17 total remaining 0 num orders 0 current order remaining 0
 part E26 total remaining 2644 num orders 492 current order remaining 2
 part D20 total remaining 1481 num orders 467 current order remaining 1
 part B15 total remaining 2520 num orders 505 current order remaining 4
